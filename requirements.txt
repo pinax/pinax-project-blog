@@ -1,0 +1,10 @@
+Django==1.6.1
+pinax-theme-bootstrap==5.0.1
+biblion==2.0.0
+
+# required by biblion
+Pillow==2.2.2
+creole==1.2
+Markdown==2.3.1
+Pygments==1.6
+pytz==2013.8

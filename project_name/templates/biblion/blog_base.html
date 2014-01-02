@@ -1,0 +1,23 @@
+{% extends "site_base.html" %}
+
+{% block body_class %}blog{% endblock %}
+
+
+{% block body %}
+    <div class="row blog-container">
+        <div class="col-md-3 sidebar">
+            {% block sidebar %}
+                <h1>
+                    <a href="{% url "blog" %}">{{ SITE_NAME }}</a>
+                </h1>
+                <p class="lead">
+                    This is where you can list your bio, add links
+                    etc., by editing the <code>biblion/blog_base.html</code>
+                    template.
+            {% endblock %}
+        </div>
+        <div class="col-md-8 blog-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}

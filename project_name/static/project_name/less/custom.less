@@ -1,94 +1,9 @@
-@light-brown: #D1C5B7;
-@medium-brown: #856941;
-@dark-brown: #735D41;
-@light-blue: #0193B7;
-@dark-blue: #063E53;
-
-@brand-primary: @light-blue;
-
-body {
-    padding-top: 0px;
-    background-color: @light-brown;
+body, #content_body {
+   padding-top: 0;
 }
 
-.blog-container {
-    margin-top: 25px;
-    .sidebar
-    {
-        h1 {
-            margin-top: 0px;
-            margin-right: -15px;
-            margin-left: -15px;
-            padding: 15px;
-            font-size: 22px;
-            background-color: @dark-blue;
-            a {
-                color: #EEE;
-            }
-            a:hover {
-                text-decoration: none;
-            }
-        }
-        background-color: #DDD;
-        margin-right: 20px;
-    }
-    .blog-content
-    {
-        .post {
-            h1, h2 {
-                margin-top: -10px;
-                margin-right: -10px;
-                margin-left: -10px;
-                padding: 10px;
-                background-color: @medium-brown;
-                color: #EEE;
-                a {
-                    color: #EEE;
-                }
-                a:hover {
-                    text-decoration: none;
-                }
-            }
-            h2 {
-                font-size: 20px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            span.date {
-                font-weight: 600;
-            }
-            p.more {
-                margin: 0px;
-            }
-            padding: 10px;
-            margin-bottom: 20px;
-            background-color: #EEE;
-            .content {
-                h1, h2 {
-                    background-color: #EEE;
-                    color: @dark-blue;
-                    margin: 0px;
-                    padding: 10px 0px;
-                }
-                h1 {
-                    font-size: 24px;
-                }
-                h2 {
-                    font-size: 22px;
-                }
-                h3 {
-                    font-size: 18px;
-                }
-                h4 {
-                    font-size: 16px;
-                }
-                img {
-                    max-width: percentage((9 / @grid-columns));
-                }
-            }
-        }
-    }
+.teaser {
+   .lead;
 }
 
 

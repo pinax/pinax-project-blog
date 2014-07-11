@@ -1,10 +1,9 @@
 {% extends "biblion/blog_base.html" %}
 
-{% load webdesign %}
-
 {% block head_title %}{{ SITE_NAME }} ({{ section_name }}){% endblock %}
 
 {% block content %}
+    <h1>{{ section_name|title }}</h1>
     {% if posts %}
         <div class="post-list">
             {% for post in posts %}

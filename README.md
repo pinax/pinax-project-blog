@@ -1,7 +1,7 @@
 pinax-project-blog
 ==================
 
-This project gets you off an running with a blog.
+This project gets you off and running with a blog.
 
 Usage:
 

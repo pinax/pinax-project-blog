@@ -1,3 +1,4 @@
 Django==1.7.4
 pinax-theme-bootstrap==5.7.2
-biblion==2.6.2
+pinax-blog==3.0.2
+pytz==2014.10

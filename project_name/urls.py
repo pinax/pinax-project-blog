@@ -7,7 +7,7 @@ from django.contrib import admin
 urlpatterns = patterns(
     "",
     url(r"^admin/", include(admin.site.urls)),
-    url(r"", include("biblion.urls")),
+    url(r"", include("pinax.blog.urls")),
 )
 
 

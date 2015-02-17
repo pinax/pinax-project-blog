@@ -1,4 +1,4 @@
-{% extends "biblion/blog_base.html" %}
+{% extends "pinax/blog/blog_base.html" %}
 
 {% block head_title %}{{ post.title }} &mdash; {{ SITE_NAME }}{% endblock %}
 
@@ -12,7 +12,7 @@
     <div class="post-detail">
         <div class="post">
             <h1>{{ post.title }}</h1>
-            {% include "biblion/dateline_stale.html" %}
+            {% include "pinax/blog/dateline_stale.html" %}
 
             <div class="teaser">{{ post.teaser_html|safe }}</div>
 

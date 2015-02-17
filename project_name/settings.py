@@ -126,7 +126,7 @@ INSTALLED_APPS = [
     "pinax_theme_bootstrap",
 
     # external
-    "biblion",
+    "pinax.blog",
 
     # project
     "{{ project_name }}",

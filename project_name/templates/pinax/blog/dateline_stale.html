@@ -4,5 +4,5 @@
         <br />
     {% endif %}
     by <span class="author"><a href="http://twitter.com/{{ post.author.username }}" title="@{{ post.author.username }}">{{ post.author.get_full_name }}</a></span> in
-    <a href="{% url "blog_section" post.section_slug %}"><span class="section">{{ post.get_section_display|capfirst }}</span></a>
+    <a href="{% url "blog_section" post.section.slug %}"><span class="section">{{ post.section.name }}</span></a>
 </p>

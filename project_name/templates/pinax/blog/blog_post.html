@@ -1,11 +1,32 @@
 {% extends "pinax/blog/blog_base.html" %}
 
-{% block head_title %}{{ post.title }} &mdash; {{ SITE_NAME }}{% endblock %}
+{% block body_class %}blog blog-post{% endblock %}
+
+{% block head_title_base %}{{ post.title }} | {{ SITE_NAME }}{% endblock %}
 
 {% block extra_head %}
-    <meta name="description" content="{{ post.teaser_html|striptags }}">
-    <meta name="og:title" content="{{ post.title }}">
-    <meta name="og:description" content="{{ post.teaser_html|striptags }}">
+    {{ block.super }}
+    <meta name="twitter:card" content="summary">
+    {% comment %}
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/62846141/pinaxproject_avatar.png">
+    {% endcomment %}
+    <meta property="og:title" content="{{ post.title }}">
+    {% if post.description %}
+        <meta name="description" content="{{ post.description }}">
+        <meta property="og:description" content="{{ post.description }}">
+    {% else %}
+        <meta name="description" content="{{ post.teaser_html|striptags }}">
+        <meta property="og:description" content="{{ post.teaser_html|striptags }}">
+    {% endif %}
+    {% if post.primary_image %}
+        <meta property="og:image" content="http://{{ SITE_DOMAIN }}{{ post.primary_image.image_path.url }}">
+    {% else %}
+        {% comment %}
+        <meta property="og:image" content="https://pbs.twimg.com/profile_images/62846141/pinaxproject_avatar.png">
+        {% endcomment %}
+    {% endif %}
+    <meta property="og:url" content="http://{{ SITE_DOMAIN }}{{ post.get_absolute_url }}">
+    <meta property="og:type" content="article">
 {% endblock %}
 
 {% block content %}

@@ -16,6 +16,16 @@
 
 
 {% block extra_head_base %}
+    {% block extra_head %}
+        {{ block.super }}
+        {% comment %}
+        <meta name="twitter:site" content="@pinaxproject">
+        {% endcomment %}
+        <meta property="og:site_name" content="{{ SITE_NAME }}">
+    {% endblock %}
+{% endblock %}
+
+{% block extra_head_base %}
     {% block extra_head %}{% endblock %}
 {% endblock %}
 

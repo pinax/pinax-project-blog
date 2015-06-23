@@ -15,6 +15,18 @@
                     etc., by editing the <code>pinax/blog/blog_base.html</code>
                     template.
                 </p>
+                <div class="search">
+                    {% if section_slug %}
+                        {% url "blog_section" section_slug as search_url %}
+                    {% else %}
+                        {% url "blog" as search_url %}
+                    {% endif %}
+
+                    <form class="form-search" action="{{ search_url }}">
+                        <label><i class="fa fa-search"></i></label>
+                        <input class="form-control" type="search" placeholder="Search..." name="q" value="{{ search_term|default:"" }}">
+                    </form>
+                </div>
             {% endblock %}
         </div>
         <div class="col-md-8 blog-content">

@@ -4,9 +4,9 @@
 
 {% block content %}
     <h1>Blog Posts</h1>
-    {% if posts %}
+    {% if post_list %}
         <div class="post-list">
-            {% for post in posts %}
+            {% for post in post_list %}
                 <div class="post">
                     <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
                     {% include "pinax/blog/dateline.html" %}
@@ -15,6 +15,7 @@
                 </div>
             {% endfor %}
         </div>
+        {% include "pagination/builtin_pagination.html" %}
     {% else %}
         <p class="alert alert-info lead">No blog posts have been published.</p>
     {% endif %}

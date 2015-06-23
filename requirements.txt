@@ -1,4 +1,7 @@
 Django==1.8.2
 pinax-theme-bootstrap==5.7.5
-pinax-blog==4.1.2
+django-bootstrap-form==3.2
+pinax-blog==4.1.9
 pytz==2015.4
+Markdown==2.6.2
+Pillow==2.8.2

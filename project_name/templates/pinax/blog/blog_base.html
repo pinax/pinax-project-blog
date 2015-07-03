@@ -16,6 +16,9 @@
                     etc., by editing the <code>pinax/blog/blog_base.html</code>
                     template.
                 </p>
+                <p>
+                    <a href="{% url 'blog_feed' 'all' 'atom' %}"><i class="fa fa-rss"></i> Atom Feed</a>
+                </p>
                 <div class="search">
                     {% if section_slug %}
                         {% url "blog_section" section_slug as search_url %}

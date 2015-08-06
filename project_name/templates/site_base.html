@@ -8,10 +8,8 @@
 {% block topbar_base %}{% endblock %}
 
 
-{% block style_base %}
-    <link href="{% static "pinax/css/theme.css" %}" rel="stylesheet">
+{% block styles %}
     <link href="{% static "css/site.css" %}" rel="stylesheet">
-    {% block extra_style %}{% endblock %}
 {% endblock %}
 
 
@@ -32,4 +30,8 @@
 
 {% block extra_body_base %}
     {% block extra_body %}{% endblock %}
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static "js/site.js" %}"></script>
 {% endblock %}

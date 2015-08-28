@@ -14,7 +14,7 @@ This collection can be found at http://pinaxproject.com.
 pinax-project-blog
 --------------------
 
-pinax-project-blog project gets you off and running with a blog and is a good demo of integrating
+`pinax-project-blog` project gets you off and running with a blog and is a good demo of integrating
 [pinax-blog](http://github.com/pinax/pinax-blog/).
 
 The source code for this project template has moved to the [blog branch](https://github.com/pinax/pinax-projects/tree/blog) of [pinax-projects](https://github.com/pinax/pinax-projects/).
